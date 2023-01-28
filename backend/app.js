@@ -2,9 +2,10 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import Appartment from "./models/appartment.model.js";
+import { appartmentRouter } from "./routers/appartments.router.js";
+// import Appartment from "./models/appartment.model.js";
 
-import appartments from "./json.js";
+// import appartments from "./json.js";
 
 dotenv.config();
 
@@ -30,12 +31,13 @@ try {
 
 // Save all the appartments in the database
 
-Appartment.create(appartments, (error) => {
-    if (error) {
-        console.log(error);
-    } else {
-        console.log("All the appartments were saved successfully");
-    }
-})
+// Appartment.create(appartments, (error) => {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log("All the appartments were saved successfully");
+//     }
+// })
 
+app.use("api/appartments", appartmentRouter);
 export default app;
