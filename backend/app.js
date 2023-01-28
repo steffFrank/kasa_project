@@ -2,6 +2,10 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import Appartment from "./models/appartment.model.js";
+
+import appartments from "./json.js";
+
 dotenv.config();
 
 const app = express();
@@ -24,5 +28,14 @@ try {
     console.error(error);
 }
 
+// Save all the appartments in the database
+
+Appartment.create(appartments, (error) => {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log("All the appartments were saved successfully");
+    }
+})
 
 export default app;
