@@ -1,0 +1,31 @@
+@import "../../assets/css/border-radius";
+
+.main {
+    position: relative;
+    width: 335px;
+    height: 111px;
+    background: url("../../assets/images/main_background.png") no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    border-radius: $b-radius-lg;
+    padding: 31px;
+    mix-blend-mode: darken;
+}
+
+.darken {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    border-radius: $b-radius-lg;
+}
+
+h1 {
+    width: 217px;
+    line-height: 100%;
+}
