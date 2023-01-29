@@ -1,3 +1,10 @@
+:root {
+  --color-primary: #FF6060,
+  --color-bg: #E5E5E5;
+  --color-secondary: #FFF;
+}
+
+
 *,
 *::before,
 *::after {
@@ -7,14 +14,15 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  color: #FF6060;
+  color: var(--color-primary);
   line-height: 142.6%;
-  background-color: #E5E5E5;
+  background-color: var(--color-bg);
+  padding: 0 clamp(1.25rem, 2vw, 6.25rem);
 }
 
 h1, h2, h3, h4 {
   font-weight: 500;
-  color: #FFF;
+  color: -var(--color-secondary);
 }
 
 h1 {
@@ -35,4 +43,5 @@ p {
 
 a {
   font-size: min(0.75rem, 1.5rem);
+  text-decoration: none;
 }

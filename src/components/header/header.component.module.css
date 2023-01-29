@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navItem {
+    margin-left: 0.625rem;
+    color: #FF6060;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    height: 17px;
+}
+.navItem:hover {
+    border-bottom: 1px solid #FF6060;
+}
+
+.logo {
+    width: 145px;
+}
+
+.active {
+    border-bottom: 1px solid #FF6060;
+}

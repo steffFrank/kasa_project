@@ -2,7 +2,7 @@ import { normalizePort, errorHandler } from "./utils.js";
 import http from "http";
 import app from "./app.js";
 
-const port = normalizePort(process.env.PORT || 3000);
+const port = normalizePort(process.env.PORT || 3001);
 
 const server = http.createServer(app);
 
