@@ -1,15 +1,16 @@
+@import "../../assets/css/_colors.scss";
+
 .footer {
     width: 100vw;
     position: fixed;
     bottom: 0;
     background-color: black;
-    color: #FFF;
+    color: $color-secondary;
     height: 209px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding-bottom: 61px; */
     right: 0; 
 }
 
@@ -19,10 +20,9 @@
     width: 122px;
     height: 39.44px;
     margin-bottom: 34px;
-}
-
-.logo path {
-    fill: #FFF;
+    path {
+        fill: $color-secondary;
+    }
 }
 
 .copy {

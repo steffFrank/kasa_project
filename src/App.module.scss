@@ -1,9 +1,4 @@
-:root {
-  --color-primary: #FF6060,
-  --color-bg: #E5E5E5;
-  --color-secondary: #FFF;
-}
-
+@import "./assets/css/_colors.scss";
 
 *,
 *::before,
@@ -14,16 +9,16 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  color: var(--color-primary);
+  color: $color-primary;
   line-height: 142.6%;
-  background-color: var(--color-bg);
+  background-color: $color-bg;
   padding: 0 clamp(1.25rem, 2vw, 6.25rem);
 
 }
 
 h1, h2, h3, h4 {
   font-weight: 500;
-  color: -var(--color-secondary);
+  color: $color-secondary;
 }
 
 h1 {

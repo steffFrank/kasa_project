@@ -1,4 +1,4 @@
-import './App.css';
+import './App.module.scss';
 import { Navigation } from './routes/navigation/navigation.route';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Error } from './routes/error/error.route';
