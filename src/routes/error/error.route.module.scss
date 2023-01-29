@@ -1,0 +1,29 @@
+@import "../../assets/css/colors";
+
+.error {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3.625rem;
+}
+
+.number {
+    color: $color-primary;
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.message {
+    font-size: 1.125rem;
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 133px;
+    font-weight: 500;
+}
+
+.link {
+    color: $color-primary;
+    text-decoration: underline;
+}

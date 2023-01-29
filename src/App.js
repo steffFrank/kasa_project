@@ -8,27 +8,33 @@ import { Appartment } from './routes/appartment/appartment.route';
 
 const App = () => {
 
+
+  const routes = [
+    {
+      path: "home",
+      element: <Home />,
+    },
+    {
+      path: "about",
+      element: <About />,
+    },
+    {
+      path: "appartment/:appartmentId",
+      element: <Appartment />,
+    },
+  ]
+
+  
+
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Navigation />,
       errorElement: <Error />,
-      children: [
-        {
-          path: "home",
-          element: <Home />
-        },
-        {
-          path: "about",
-          element: <About />
-        },
-        {
-          path: "appartment/:appartmentId",
-          element: <Appartment />
-        }
-      ]
+      children: routes
     }
   ])
+
   return (
     <>
       <RouterProvider router={router} />

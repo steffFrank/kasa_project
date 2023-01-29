@@ -1,8 +1,20 @@
-import "./error.route.module.css";
-
+import styles from "./error.route.module.scss";
+import { Link } from "react-router-dom";
+import { Header } from "../../components/header/header.component";
+import { Footer } from "../../components/footer/footer.component";
 
 export const Error = () => {
     return (
-        <div>404</div>
+        <>
+            <Header />
+            <section className={styles.error}>
+                <h1 className={styles.number}>404</h1>
+                <p className={styles.message}>Oups! La page que 
+                vous demandez n'existe pas.</p>
+                <Link className={styles.link} to="home">Retourner sur la page d'accueil</Link>
+            </section>
+            <Footer />
+        </>
+        
     )
 }
