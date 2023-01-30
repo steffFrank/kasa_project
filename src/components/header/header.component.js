@@ -16,7 +16,6 @@ export const Header = () => {
     const toggleActive = (index) => {
         setActiveLinkIndex(index);
     }
-    console.log(activeLinkIndex);
     return (
         <header className={styles.header}>
             <Logo className={styles.logo}/>

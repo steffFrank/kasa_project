@@ -8,7 +8,6 @@ import { Appartment } from './routes/appartment/appartment.route';
 
 const App = () => {
 
-
   const routes = [
     {
       path: "home",
@@ -23,8 +22,6 @@ const App = () => {
       element: <Appartment />,
     },
   ]
-
-  
 
   const router = createBrowserRouter([
     {
