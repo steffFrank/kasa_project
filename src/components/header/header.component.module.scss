@@ -14,7 +14,7 @@
 }
 
 .navItem {
-    margin-left: 0.625rem;
+    margin-left: clamp(10px, 4vw, 57px);
     color: $color-primary;
     text-transform: uppercase;
     font-weight: 500;

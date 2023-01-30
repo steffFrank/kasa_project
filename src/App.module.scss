@@ -6,14 +6,17 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   color: $color-primary;
   line-height: 142.6%;
   background-color: $color-bg;
-  padding: 0 clamp(1.25rem, 2vw, 6.25rem);
-
+  padding: 0 20px;
+  @media screen and ($laptop) {
+    padding: 0 100px;
+  }
 }
 
 h1, h2, h3, h4 {
@@ -41,3 +44,4 @@ a {
   font-size: min(0.75rem, 1.5rem);
   text-decoration: none;
 }
+

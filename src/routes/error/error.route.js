@@ -17,6 +17,5 @@ export const Error = () => {
             </section>
             <Footer />
         </>
-        
     )
 }

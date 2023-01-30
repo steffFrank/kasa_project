@@ -2,25 +2,29 @@
 @import "../../assets/css/functions";
 
 .error {
-    height: 60vh;
+    min-height: $minBodyHeight;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 0 3.625rem;
+    padding: 0 58px;
     text-align: center;
+    margin-bottom: 161px;
+    @media screen and ($laptop) {
+        margin-bottom: 159px;
+    }
 }
 
 .number {
     display: flex;
     align-items:center;
+    justify-self: flex-start;
     line-height: $line-height;
-    vertical-align:middle;
     height: clamp(99px, 20vw, 263px);
     color: $color-primary;
     font-size: clamp(rem(96px), 20vw, rem(288px));
     font-weight: 700;
     margin-bottom: clamp(11px, 2vw, 66px);
+    margin-top: 165px; //195px - 30px(header padding)
     @media screen and ($laptop) {
         margin-bottom: 66px;
     }

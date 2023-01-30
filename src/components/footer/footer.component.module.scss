@@ -3,8 +3,7 @@
 
 .footer {
     width: 100vw;
-    position: fixed;
-    bottom: 0;
+    margin-left: -20px;
     background-color: black;
     color: $color-secondary;
     height: 209px;
@@ -12,7 +11,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    right: 0; 
+    @media screen and ($laptop) {
+        margin-left: -100px;
+    }
 }
 
 

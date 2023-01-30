@@ -17,3 +17,6 @@ $media: (
 $tablet : map-get($media, tablet);
 $laptop : map-get($media, laptop);
 $desktop: map-get($media, desktop);
+
+
+$minBodyHeight: calc(100vh - 209px); //41 = footer height - header height
