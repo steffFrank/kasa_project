@@ -16,20 +16,21 @@
 .navItem {
     margin-left: clamp(10px, 4vw, 57px);
     color: $color-primary;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 500;
-    border-bottom: 1px solid transparent;
     font-size: clamp(rem(12px), $vw, rem(24px));
     &:hover {
-        border-bottom: 1px solid $color-primary;
+        text-decoration: underline;
     }
-    &:active {
-        border-bottom: 1px solid $color-primary;
-    }
+  
 }
 
 
 .logo {
     width: clamp(145px, 15vw, 210.32px);
     height: clamp(47px, 12vw, 68px);
+}
+
+.active {
+    text-decoration: underline;
 }
