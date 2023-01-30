@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Main } from "../../components/main/main.component";
 import { AppartementContext } from "../../context/appartment.context";
+import { Thumb } from "../../components/thumb/thumb.component";
 import styles from "./home.route.module.scss";
 
 
@@ -13,7 +14,7 @@ export const Home = () => {
         <section className={styles.home}>
             <Main />
          {isLoading ? <div>Loading...</div> : ( appartments.map(appartment => {
-                return <li key={appartment._id}>{appartment.host.name}</li>
+                return <Thumb key={appartment._id} title={appartment.title} id={appartment._id} cover={appartment.cover} />
          }))}  
         </section>
     )
