@@ -39,5 +39,5 @@ try {
 //     }
 // })
 
-app.use("api/appartments", appartmentRouter);
+app.use("/appartments", appartmentRouter);
 export default app;
