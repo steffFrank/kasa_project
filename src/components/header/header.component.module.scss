@@ -1,4 +1,5 @@
-@import "../../assets/css/colors";
+@import "../../assets/css/variables";
+@import "../../assets/css/functions";
 
 .header {
     display: flex;
@@ -18,7 +19,7 @@
     text-transform: uppercase;
     font-weight: 500;
     border-bottom: 1px solid transparent;
-    height: 17px;
+    font-size: clamp(rem(12px), $vw, rem(24px));
     &:hover {
         border-bottom: 1px solid $color-primary;
     }
@@ -29,5 +30,6 @@
 
 
 .logo {
-    width: 145px;
+    width: clamp(145px, 15vw, 210.32px);
+    height: clamp(47px, 12vw, 68px);
 }

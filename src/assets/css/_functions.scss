@@ -1,0 +1,3 @@
+@function rem($fontSize, $htmlSize: 16px) {
+    @return calc($fontSize / $htmlSize) * 1rem;
+}

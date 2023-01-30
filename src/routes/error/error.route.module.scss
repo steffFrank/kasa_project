@@ -1,4 +1,5 @@
-@import "../../assets/css/colors";
+@import "../../assets/css/variables";
+@import "../../assets/css/functions";
 
 .error {
     height: 60vh;
@@ -7,23 +8,41 @@
     justify-content: center;
     align-items: center;
     padding: 0 3.625rem;
+    text-align: center;
 }
 
 .number {
+    display: flex;
+    align-items:center;
+    line-height: $line-height;
+    vertical-align:middle;
+    height: clamp(99px, 20vw, 263px);
     color: $color-primary;
-    font-size: 6rem;
+    font-size: clamp(rem(96px), 20vw, rem(288px));
     font-weight: 700;
+    margin-bottom: clamp(11px, 2vw, 66px);
+    @media screen and ($laptop) {
+        margin-bottom: 66px;
+    }
 }
 
 .message {
-    font-size: 1.125rem;
+    min-width: 280px;
+    font-size: clamp(rem(18px), 3vw, rem(36px));
     text-align: center;
-    line-height: 25px;
-    margin-bottom: 133px;
+    margin-bottom: clamp(133px, 15vw, 182px);
     font-weight: 500;
+    line-height: $line-height;
+    span:first-child {
+        display: block;
+        @media screen and ($tablet) {
+            display: inline;
+        }
+    }
 }
 
 .link {
     color: $color-primary;
     text-decoration: underline;
+    font-size: clamp(rem(14px), 3vw, rem(18px));
 }

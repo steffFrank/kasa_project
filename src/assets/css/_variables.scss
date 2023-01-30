@@ -1,0 +1,19 @@
+$color-primary: #FF6060;
+$color-bg: #E5E5E5;
+$color-secondary: #FFF;
+$line-height: 142.6%;
+
+$b-radius-sm: 5px;
+$b-radius-lg: 10px;
+
+$vw: 2vw;
+
+$media: (
+    tablet: "min-width: 768px",
+    laptop: "min-width: 992px",
+    desktop: "min-width: 1440px"
+);
+
+$tablet : map-get($media, tablet);
+$laptop : map-get($media, laptop);
+$desktop: map-get($media, desktop);
