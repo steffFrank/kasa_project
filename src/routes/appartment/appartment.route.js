@@ -9,10 +9,10 @@ export const Appartment = () => {
     const { appartments, isLoading } = useContext(appartementContext);
     const { id } = useParams();
     const appartment = appartments.find(appartment => appartment._id === id);
-    console.log(appartments[0]._id, id);
+    
     return (
         isLoading ? <div>...Loading</div> : <section className={styles.appartment}>
-            <Carousel pictures={id}/>
+            <Carousel pictures={appartment.pictures}/>
         </section>
     )
 }
