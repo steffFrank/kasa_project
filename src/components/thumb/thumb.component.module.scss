@@ -7,6 +7,11 @@
     border-radius: $b-radius-lg;
     mix-blend-mode: darken;
     margin: auto;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    &:hover {
+        transform: scale(1.06);
+    }
 }
 
 .darken {

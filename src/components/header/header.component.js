@@ -8,7 +8,7 @@ export const Header = () => {
 
     // List of links
     const links = [
-        {path: "home", text: "accueil"},
+        {path: "appartments", text: "accueil"},
         {path: "about", text: "a propos"}
     ]
 

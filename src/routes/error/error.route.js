@@ -13,7 +13,7 @@ export const Error = () => {
                     <span>Oups! La page que </span>
                     <span>vous demandez n'existe pas.</span>
                 </p>
-                <Link className={styles.link} to="home">Retourner sur la page d'accueil</Link>
+                <Link className={styles.link} to="appartments">Retourner sur la page d'accueil</Link>
             </section>
             <Footer />
         </>

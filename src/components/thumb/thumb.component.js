@@ -8,7 +8,7 @@ export const Thumb = ({title, id, cover}) => {
         background: `url(${cover})`,
         backgroundSize: "cover"
     };
-
+    
     return (
         <Link className={styles.link} to={id}>
             <article className={styles.article} style = {divStyle}>

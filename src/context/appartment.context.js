@@ -3,7 +3,7 @@ import {createContext, useEffect, useState } from "react";
 
 const appartments = JSON.parse(localStorage.getItem("appartments")) || null;
 
-export const AppartementContext = createContext({
+export const appartementContext = createContext({
     appartments: appartments,
     isLoading: true,
     error: null
@@ -33,5 +33,5 @@ export const AppartmentProvider = ({children}) => {
     },[appartments.length]);
     const value = { appartments, isLoading, error}
     
-    return <AppartementContext.Provider value={value}>{children}</AppartementContext.Provider>
+    return <appartementContext.Provider value={value}>{children}</appartementContext.Provider>
 }

@@ -3,6 +3,8 @@ import { AppartmentPreview } from "../../components/appartmentPreview/appartment
 import { Main } from "../../components/main/main.component";
 import { appartementContext } from "../../context/appartment.context";
 import styles from "./home.route.module.scss";
+import {Routes, Route} from "react-router-dom";
+import { Appartment } from "../appartment/appartment.route";
 
 
 export const Home = () => {
@@ -11,8 +13,12 @@ export const Home = () => {
 
     return (
         <section className={styles.home}>
-            <Main />
-            {isLoading ? <div>loading</div> : <AppartmentPreview appartments={appartments}/>}
+            <Routes>
+                <Route index element={<AppartmentPreview appartments={appartments} />} />
+                <Route path=":id" element={<Appartment />} />
+            </Routes>
+
         </section>
+       
     )
 }
