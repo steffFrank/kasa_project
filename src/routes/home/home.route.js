@@ -9,13 +9,12 @@ export const Home = () => {
 
     const { appartments, isLoading } = useContext(AppartementContext);
 
-
     return (
         <section className={styles.home}>
             <Main />
-         {isLoading ? <div>Loading...</div> : ( appartments.map(appartment => {
+         {isLoading ? <div>Loading...</div> : (<div className={styles.houses}>{appartments.map(appartment => {
                 return <Thumb key={appartment._id} title={appartment.title} id={appartment._id} cover={appartment.cover} />
-         }))}  
+         })}</div>)}  
         </section>
     )
 }

@@ -2,10 +2,11 @@
 @import "../../assets/css/variables";
 
 .article {
-    width: clamp(335px, 15vw, 340px);
+    width: clamp(335px, 45vw, 340px);
     height: clamp(255px, 15vw, 340px);
     border-radius: $b-radius-lg;
     mix-blend-mode: darken;
+    margin: auto;
 }
 
 .darken {
@@ -16,6 +17,7 @@
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0 , 0, 0.5) 100%);
     padding: 0 clamp(19.71px, 2vw, 20px);
     padding-bottom: clamp(15px, 2vw, 20px);
+    border-radius: $b-radius-lg;
 }
 
 .title {

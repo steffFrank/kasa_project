@@ -3,3 +3,12 @@
 .home {
     min-height: $minBodyHeight;
 }
+
+.houses {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(335px,  1fr));
+    gap: clamp(20px, 3vw, 50px);
+    @media screen and ($laptop) {
+        padding: 56px 50px;
+    }
+}
