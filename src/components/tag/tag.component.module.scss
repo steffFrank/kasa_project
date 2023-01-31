@@ -1,0 +1,18 @@
+@import "../../assets/css/variables";
+@import "../../assets/css/functions";
+
+.tag {
+    min-width: clamp(84px, 13vw, 115px);
+    height: clamp(18px, 2vw, 25px);
+    background-color: $color-primary;
+    border-radius: clamp($b-radius-sm, 2vw, $b-radius-lg);
+    margin-right: 10px;
+}
+
+
+.title {
+    font-size: clamp(rem(10px), 2vw, rem(14px));
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}

@@ -35,6 +35,12 @@
 
 .left, .right {
     width: clamp(11.67px, 3vw, 48px);
+    cursor: pointer;
+    &:hover {
+        path {
+            fill: $color-primary;
+        }
+    }
 }
 
 .footer {

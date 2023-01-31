@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Carousel } from "../../components/carrousel/carousel.component";
 import { appartementContext } from "../../context/appartment.context";
 import styles from "./appartment.route.module.scss";
+import { TitleContainer } from "../../components/titleContainer/titleContainer.component";
 
 
 export const Appartment = () => {
@@ -13,6 +14,7 @@ export const Appartment = () => {
     return (
         isLoading ? <div>...Loading</div> : <section className={styles.appartment}>
             <Carousel pictures={appartment.pictures}/>
+            <TitleContainer appartment={appartment}/>
         </section>
     )
 }
