@@ -1,10 +1,8 @@
 import styles from "./header.component.module.scss";
 import { ReactComponent as Logo } from "../../assets/images/logo.svg";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export const Header = () => {
-    const [activeLinkIndex, setActiveLinkIndex] = useState(0);
 
     // List of links
     const links = [
@@ -12,27 +10,20 @@ export const Header = () => {
         {path: "about", text: "a propos"}
     ]
 
-    // Change the value of the activeLinkIndex to the index of the clicked link
-    const toggleActive = (index) => {
-        setActiveLinkIndex(index);
-    }
+    //Fix - Refactor to use NavLink
     return (
         <header className={styles.header}>
             <Logo className={styles.logo}/>
             <nav>
                 <ul className={styles.nav}>
-                    {links.map((link, index) => {
-                       return <Link 
-                                onClick={() => toggleActive(index)}
+                    {links.map((link) => {
+                       return <NavLink 
                                 key={link.path} 
-                                to={link.path}>
-                                <li 
-                                // if the actual index is the one clicked, add the active style or remove it if it is not 
-                                    className={index === activeLinkIndex ? `${styles.navItem} ${styles.active}` 
-                                    : styles.navItem }>
-                                        {link.text}
+                                to={link.path}
+                                className={({ isActive }) => isActive ? `${styles.active} ${styles.navItem}` : `${styles.navItem}`}>
+                                <li>{link.text}
                                 </li>
-                        </Link>
+                        </NavLink>
                     })}
                 </ul>
             </nav>
