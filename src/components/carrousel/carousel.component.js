@@ -7,33 +7,16 @@ export const Carousel = ({pictures}) => {
     const maxIndex = pictures.length;
 
     const handleClick = (side) => {
-        switch (side) {
-            case "right": 
-                if (index === maxIndex) {
-                    setIndex(1);
-                    return;
-                }
-                setIndex(prevIndex => prevIndex + 1);
-                break;
-            case "left":
-                if (index === 1) {
-                    setIndex(maxIndex);
-                    return;
-                }
-                setIndex(prevIndex => prevIndex - 1);
-                break;
-            default:
-                return;
+        if (side === "right") {
+            setIndex(index === maxIndex ? 1 : index + 1);
+        } else if (side === "left") {
+            setIndex(index === 1 ? maxIndex : index - 1);
         }
-    }
-    // Fix - put everything in scss
-    const style = {
-        backgroundImage: `url(${pictures[index-1]})`,
-        backgroundSize: "cover"
     }
 
     return (
-        <main className={styles.main} style={style}>
+        <main className={styles.main}>
+            <img className={styles.img} src={`${pictures[index-1]}`} alt={`Room ${index} of ${maxIndex}`}/>
             <div className={styles.arrows}>
                 <Arrow onClick={() => handleClick("left")} className={styles.left} />
                 <Arrow onClick={() => handleClick("right")} className={styles.right} />
@@ -43,4 +26,4 @@ export const Carousel = ({pictures}) => {
             </footer>
         </main>
     )
-} 
+}
