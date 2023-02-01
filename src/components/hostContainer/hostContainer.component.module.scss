@@ -1,0 +1,13 @@
+@import "../../assets/css/variables";
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    @media screen and ($laptop) {
+        flex-direction: column-reverse;
+        margin-top: 24px;
+        align-items: flex-end;
+    }
+}

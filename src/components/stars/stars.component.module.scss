@@ -1,0 +1,14 @@
+@import "../../assets/css/variables";
+
+.stars {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.rated, .unrated {
+    width: clamp(15px, 3vw, 30px);
+    height: clamp(15px, 3vw, 30px);
+    margin-right: clamp(5px, 1vw, 10px);
+}
+.unrated path {
+    fill: $color-star;
+}

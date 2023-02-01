@@ -1,6 +1,37 @@
 @import "../../assets/css/functions";
 @import "../../assets/css/variables";
 
+
+
+.infos {
+    @media screen and ($laptop) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.title, .location {
+    color: $color-primary;
+}
+
+.title {
+    font-size: clamp(rem(18px), 4vw, rem(36px));
+    width: clamp(335px, 85vw, 635px);
+    line-height: $line-height;
+}
+
+.location {
+    font-size: clamp(rem(14px), 2vw, rem(18px));
+    margin-top: 5px;
+    line-height: $line-height;
+    margin-bottom: clamp(10px, 2vw, 20px);
+}
+
 .tagList {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    @media screen and ($laptop) {
+        width: 635px;
+    }
 }

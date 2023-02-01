@@ -1,0 +1,22 @@
+@import "../../assets/css/variables";
+@import "../../assets/css/functions";
+
+
+.host {
+    display: flex;
+}
+
+.img {
+    border-radius: 50%;
+    width: clamp(32px, 5vw, 64px);
+    height: 100%;
+}
+
+.name {
+    font-size: clamp(rem(12px), 2vw, rem(18px));
+    align-self: center;
+    line-height: $line-height;
+    margin-right: 10px;
+    text-align: right;
+    width: min-content;
+}

@@ -5,14 +5,13 @@
     min-width: clamp(84px, 13vw, 115px);
     height: clamp(18px, 2vw, 25px);
     background-color: $color-primary;
-    border-radius: clamp($b-radius-sm, 2vw, $b-radius-lg);
-    margin-right: 10px;
+    border-radius: clamp($b-radius-sm, 1vw, $b-radius-lg);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
-
 
 .title {
     font-size: clamp(rem(10px), 2vw, rem(14px));
-    height: 100%;
-    text-align: center;
-    vertical-align: middle;
+    line-height: $line-height;
 }
