@@ -8,7 +8,7 @@ const DROPDOWN_TYPES_CLASSES = {
 }
 
 export const Dropdown = ({type, title, children}) => {
-    const [isDropdownOpen, setIsdropdownOpen] = useState(true);
+    const [isDropdownOpen, setIsdropdownOpen] = useState(false);
 
     const toggleDropdown = () => {
         setIsdropdownOpen(prevState => !prevState);
