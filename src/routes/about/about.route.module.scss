@@ -10,11 +10,15 @@
     min-width: 335px;
     margin: auto;
     height: 223px;
-    background: url("../../assets/images/bg-about.png");
+    background: url("../../assets/images/bg_about_sm.png") center;
     background-size: cover;
     border-radius: $b-radius-lg;
     mix-blend-mode: darken;
     margin-bottom: clamp(19px, 3vw, 33px);
+    @media screen and ($tablet) {
+        background: url("../../assets/images/bg-about.png") center;
+        background-size: cover;
+    }
 }
 
 .darken {

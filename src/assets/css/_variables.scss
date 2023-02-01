@@ -22,4 +22,4 @@ $laptop : map-get($media, laptop);
 $desktop: map-get($media, desktop);
 
 
-$minBodyHeight: calc(100vh - 209px); //41 = footer height - header height
+$minBodyHeight: calc(100vh - 300px); //41 = footer height - header height
