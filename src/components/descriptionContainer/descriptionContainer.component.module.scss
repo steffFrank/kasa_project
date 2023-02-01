@@ -1,0 +1,15 @@
+@import "../../assets/css/variables";
+@import "../../assets/css/functions";
+
+.description {
+    margin-bottom: 64.5px;
+    @media screen and ($tablet) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 76px;
+    }
+}
+
+.listItem {
+    list-style-type: none;
+}

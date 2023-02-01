@@ -1,0 +1,62 @@
+@import "../../assets/css/variables";
+@import "../../assets/css/functions";
+
+
+.container {
+    margin-top: 16.5px;
+    @media screen and ($laptop) {
+        margin-top: 24px;
+    }
+}
+.bar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-primary;
+    z-index: 10;
+}
+
+.bar, .textBox {
+    border-radius: clamp($b-radius-sm, 1vw, $b-radius-lg);
+}
+
+.medium {
+    // width: min(335px, 582px);
+    height: clamp(30px, 3vw, 52px);
+    border-radius: clamp(5px, 2vw, 10px);
+}
+
+
+.title {
+    font-size: clamp(rem(13px), 2vw, rem(18px));
+    margin-left: clamp(11.5px, 3vw, 20px);
+}
+
+.arrow {
+    width: clamp(9px,3vw, 15.56px);
+    height: clamp(15px, 3vw, 26px);
+    transform: rotate(-90deg);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.open {
+    transform: rotate(90deg);
+}
+
+.textBox {
+    transform: translateY(-200px);
+    display: none;
+    background-color: $color-star;
+    padding-top: clamp(23px, 3vw, 40px);
+    padding-left: clamp(11px, 3vw, 20px);
+    padding-bottom: clamp(1px, 2vw, 27px);
+    font-size: clamp(rem(12px), 2vw, rem(18px));
+    z-index: -100;
+}
+
+.boxOpen {
+    display: block;
+    transform: translateY(-5px);
+}
