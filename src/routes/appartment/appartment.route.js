@@ -5,6 +5,7 @@ import { appartementContext } from "../../context/appartment.context";
 import styles from "./appartment.route.module.scss";
 import { TitleContainer } from "../../components/titleContainer/titleContainer.component";
 import { DescriptionContainer } from "../../components/descriptionContainer/descriptionContainer.component";
+import { Loading } from "../../components/loading/loading.component";
 
 
 export const Appartment = () => {
@@ -13,7 +14,7 @@ export const Appartment = () => {
     const appartment = appartments.find(appartment => appartment._id === id);
     
     return (
-        isLoading ? <div>...Loading</div> : <section className={styles.appartment}>
+        isLoading ? <Loading /> : <section className={styles.appartment}>
             <Carousel pictures={appartment.pictures}/>
             <TitleContainer appartment={appartment}/>
             <DescriptionContainer description={appartment.description} equipements={appartment.equipments} />

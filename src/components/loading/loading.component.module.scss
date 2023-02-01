@@ -1,0 +1,25 @@
+@import "../../assets/css/variables";
+@import "../../assets/css/functions";
+
+.container {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    border: 8px solid $color-primary;
+    background-color: $color-secondary;
+    border-radius: 50%;
+    border-top: 8px solid #000;
+    animation: spin 0.8s infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

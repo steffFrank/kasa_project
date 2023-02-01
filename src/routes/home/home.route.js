@@ -13,7 +13,7 @@ export const Home = () => {
     return (
         <section className={styles.home}>
             <Routes>
-                <Route index element={<AppartmentPreview appartments={appartments} />} />
+                <Route index element={<AppartmentPreview appartments={appartments} isLoading={isLoading} />} />
                 <Route path=":id" element={<Appartment />} />
             </Routes>
 
