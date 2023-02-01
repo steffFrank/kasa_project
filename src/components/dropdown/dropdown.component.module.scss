@@ -11,6 +11,7 @@
 .bar {
     position: relative;
     display: flex;
+    height: clamp(30px, 3vw, 52px);
     justify-content: space-between;
     align-items: center;
     background-color: $color-primary;
@@ -22,9 +23,12 @@
 }
 
 .medium {
-    // width: min(335px, 582px);
-    height: clamp(30px, 3vw, 52px);
-    border-radius: clamp(5px, 2vw, 10px);
+    border-radius: clamp($b-radius-sm, 1vw, $b-radius-lg);
+}
+
+.large {
+    height: clamp(30px, 3vw, 47px);
+    border-radius: 5px;
 }
 
 

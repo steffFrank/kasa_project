@@ -7,7 +7,7 @@ const DROPDOWN_TYPES_CLASSES = {
     large: styles.large
 }
 
-export const Dropdown = ({type, title,children}) => {
+export const Dropdown = ({type, title, children}) => {
     const [isDropdownOpen, setIsdropdownOpen] = useState(true);
 
     const toggleDropdown = () => {
