@@ -1,13 +1,13 @@
-import './App.module.scss';
-import { Navigation } from './routes/navigation/navigation.route';
+import { Navigation } from './pages/navigation/navigation.page';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Error } from './routes/error/error.route';
-import { Home } from './routes/home/home.route';
-import { About } from './routes/about/about.route';
-import { Appartment } from './routes/appartment/appartment.route';
-import { paths } from './utils/route.utils';
+import { Error } from './pages/error/error.page';
+import { Home } from './pages/home/home.page';
+import { About } from './pages/about/about.page';
+import { Appartment } from './pages/appartment/appartment.page';
+import { paths } from './utils/page.utils';
 import { Footer } from './components/footer/footer.component';
 import { Header } from './components/header/header.component';
+import './App.module.scss';
 
 const App = () => {
 

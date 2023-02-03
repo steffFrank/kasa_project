@@ -1,7 +1,7 @@
 import styles from "./header.component.module.scss";
 import { ReactComponent as Logo } from "../../assets/images/logo.svg";
 import { NavLink } from "react-router-dom";
-import { links } from "../../utils/route.utils";
+import { links } from "../../utils/page.utils";
 
 export const Header = () => {
 

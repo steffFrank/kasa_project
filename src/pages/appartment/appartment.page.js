@@ -2,11 +2,12 @@ import { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Carousel } from "../../components/carrousel/carousel.component";
 import { appartementContext } from "../../context/appartment.context";
-import styles from "./appartment.route.module.scss";
 import { TitleContainer } from "../../components/titleContainer/titleContainer.component";
 import { DescriptionContainer } from "../../components/descriptionContainer/descriptionContainer.component";
 import { Loading } from "../../components/loading/loading.component";
-import { paths } from "../../utils/route.utils";
+import { paths } from "../../utils/page.utils";
+import styles from "./appartment.page.module.scss";
+
 
 
 export const Appartment = () => {

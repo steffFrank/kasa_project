@@ -1,6 +1,6 @@
-import styles from "./error.route.module.scss";
+import styles from "./error.page.module.scss";
 import { Link } from "react-router-dom";
-import { paths } from "../../utils/route.utils";
+import { paths } from "../../utils/page.utils";
 
 export const Error = () => {
     return (

@@ -1,4 +1,4 @@
-import styles from "./about.route.module.scss";
+import styles from "./about.page.module.scss";
 import { Dropdown } from "../../components/dropdown/dropdown.component";
 import { aboutTexts } from "../../utils/about.utils";
 
@@ -16,4 +16,6 @@ export const About = () => {
         </section>
     )
 }
+
+
 

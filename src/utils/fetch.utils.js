@@ -5,7 +5,7 @@ export const useGetDataFromApi = (url) => {
     const [data, setData] = useState(appartments);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
-
+    console.log("utils");
     useEffect(() => {
         const fetchData = async () => {
             try {
