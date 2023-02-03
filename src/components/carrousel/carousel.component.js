@@ -1,6 +1,6 @@
 import styles from "./carousel.component.module.scss";
 import { ReactComponent as Arrow } from "../../assets/images/Vector.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Carousel = ({pictures}) => {
     const [index, setIndex] = useState(1);
@@ -13,6 +13,15 @@ export const Carousel = ({pictures}) => {
             setIndex(index === 1 ? maxIndex : index - 1);
         }
     }
+
+    useEffect(() => {
+        if (pictures.length > 1) {
+            const timeout = setTimeout(() => {
+                handleClick("right");
+            }, 5000);
+            return () => clearTimeout(timeout);
+        }        
+    })
 
     return (
         <main className={styles.main}>
