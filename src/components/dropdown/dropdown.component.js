@@ -16,9 +16,9 @@ export const Dropdown = ({type, title, children}) => {
 
     return (
         <div className={styles.container}>
-            <div className={`${styles.bar} ${DROPDOWN_TYPES_CLASSES[type]}`}>
+            <div onClick={toggleDropdown} className={`${styles.bar} ${DROPDOWN_TYPES_CLASSES[type]}`}>
                 <h2 className={styles.title}>{title}</h2>
-                <Arrow onClick={toggleDropdown} className={isDropdownOpen ? `${styles.arrow} ${styles.open}` : `${styles.arrow}`}/>
+                <Arrow  className={isDropdownOpen ? `${styles.arrow} ${styles.open}` : `${styles.arrow}`}/>
             </div>
             <div className={isDropdownOpen ? `${styles.textBox} ${styles.boxOpen}` : `${styles.textBox}`}>{children}</div>
         </div>

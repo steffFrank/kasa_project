@@ -23,3 +23,5 @@ $desktop: map-get($media, desktop);
 
 
 $minBodyHeight: calc(100vh - 300px); //41 = footer height - header height
+
+$transition: transform 0.3s cubic-bezier(0.23, 1, 0.320, 1);

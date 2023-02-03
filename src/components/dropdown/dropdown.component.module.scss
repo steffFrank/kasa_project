@@ -16,6 +16,7 @@
     align-items: center;
     background-color: $color-primary;
     z-index: 10;
+    cursor: pointer;
 }
 
 .bar, .textBox {
@@ -40,13 +41,14 @@
 .arrow {
     width: clamp(9px,3vw, 15.56px);
     height: clamp(15px, 3vw, 26px);
-    transform: rotate(90deg);
+    transform: rotate(270deg);
     margin-right: 10px;
-    cursor: pointer;
+    transition: $transition;
 }
 
 .open {
-    transform: rotate(-90deg);
+    transition: $transition;
+    transform: rotate(90deg);
 }
 
 .textBox {
