@@ -41,14 +41,14 @@
 .arrow {
     width: clamp(9px,3vw, 15.56px);
     height: clamp(15px, 3vw, 26px);
-    transform: rotate(270deg);
+    transform: rotate(90deg);
     margin-right: 10px;
     transition: $transition;
 }
 
 .open {
     transition: $transition;
-    transform: rotate(90deg);
+    transform: rotate(270deg);
 }
 
 .textBox {
