@@ -17,13 +17,13 @@ export const Carousel = ({pictures}) => {
     return (
         <main className={styles.main}>
             <img className={styles.img} src={`${pictures[index-1]}`} alt={`Room ${index} of ${maxIndex}`}/>
-            <div className={styles.arrows}>
+            {pictures.length !== 1 &&  <div className={styles.arrows}>
                 <Arrow onClick={() => handleClick("left")} className={styles.left} />
                 <Arrow onClick={() => handleClick("right")} className={styles.right} />
-            </div>
-            <footer className={styles.footer}>
+            </div>}
+            {pictures.lengh !== 1 && <footer className={styles.footer}>
                 <span>{index} / {maxIndex}</span>
-            </footer>
+            </footer>}
         </main>
     )
 }

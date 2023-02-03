@@ -1,17 +1,25 @@
-import { useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { Carousel } from "../../components/carrousel/carousel.component";
 import { appartementContext } from "../../context/appartment.context";
 import styles from "./appartment.route.module.scss";
 import { TitleContainer } from "../../components/titleContainer/titleContainer.component";
 import { DescriptionContainer } from "../../components/descriptionContainer/descriptionContainer.component";
 import { Loading } from "../../components/loading/loading.component";
+import { paths } from "../../utils/route.utils";
 
 
 export const Appartment = () => {
     const { appartments, isLoading } = useContext(appartementContext);
     const { id } = useParams();
     const appartment = appartments.find(appartment => appartment._id === id);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!appartment) {
+            navigate(paths.error);
+        }
+    });
     
     return (
         isLoading ? <Loading /> : <section className={styles.appartment}>

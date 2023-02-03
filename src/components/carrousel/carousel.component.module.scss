@@ -19,6 +19,7 @@
     width: 100%;
     height: 100%;
     border-radius: clamp($b-radius-lg, 5vw, $b-radius-xlg);
+    object-fit: cover;
 }
 .arrows {
     position: absolute;
