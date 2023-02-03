@@ -4,11 +4,7 @@ import { NavLink } from "react-router-dom";
 import { links } from "../../utils/route.utils";
 
 export const Header = () => {
-
-    // List of links
-   
-
-    //Fix - Refactor to use NavLink
+    
     return (
         <header className={styles.header}>
             <Logo className={styles.logo}/>

@@ -6,6 +6,8 @@ import { Home } from './routes/home/home.route';
 import { About } from './routes/about/about.route';
 import { Appartment } from './routes/appartment/appartment.route';
 import { paths } from './utils/route.utils';
+import { Footer } from './components/footer/footer.component';
+import { Header } from './components/header/header.component';
 
 const App = () => {
 
@@ -33,6 +35,7 @@ const App = () => {
     {
       path: "/",
       element: <Navigation />,
+      errorElement: (<><Header /><Error /><Footer /></>),
       children: routes,
     }  
   ])

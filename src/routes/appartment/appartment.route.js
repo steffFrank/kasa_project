@@ -10,13 +10,14 @@ import { paths } from "../../utils/route.utils";
 
 
 export const Appartment = () => {
-    const { appartments, isLoading } = useContext(appartementContext);
+    const { appartments, isLoading, error } = useContext(appartementContext);
+    
+    const navigate = useNavigate();
     const { id } = useParams();
     const appartment = appartments.find(appartment => appartment._id === id);
-    const navigate = useNavigate();
 
     useEffect(() => {
-        if (!appartment) {
+        if (!appartment || error) {
             navigate(paths.error);
         }
     });
