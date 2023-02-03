@@ -4,18 +4,18 @@ import { NavLink } from "react-router-dom";
 import { links } from "../../utils/route.utils";
 
 export const Header = () => {
-    
+
     return (
         <header className={styles.header}>
-            <Logo className={styles.logo}/>
+            <Logo className={styles.logo} />
             <nav>
                 <ul className={styles.nav}>
                     {links.map((link) => {
-                       return <NavLink 
-                                key={link.path} 
-                                to={link.path}
-                                className={({ isActive }) => isActive ? `${styles.active} ${styles.navItem}` : `${styles.navItem}`}>
-                                <li>{link.text}</li>
+                        return <NavLink
+                            key={link.path}
+                            to={link.path}
+                            className={({ isActive }) => isActive ? `${styles.active} ${styles.navItem}` : `${styles.navItem}`}>
+                            <li>{link.text}</li>
                         </NavLink>
                     })}
                 </ul>

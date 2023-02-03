@@ -1,7 +1,7 @@
 import styles from "./host.component.module.scss";
 
 
-export const Host = ({name, picture}) => {
+export const Host = ({ name, picture }) => {
     return (
         <div className={styles.host}>
             <p className={styles.name}>{name}</p>

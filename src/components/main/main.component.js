@@ -1,6 +1,5 @@
 import styles from "./main.component.module.scss";
 
-
 export const Main = () => {
     return (
         <main className={styles.main}>
@@ -8,5 +7,5 @@ export const Main = () => {
                 <h1 className={styles.title}>Chez vous, partout et ailleurs</h1>
             </div>
         </main>
-    )
-}
+    );
+};

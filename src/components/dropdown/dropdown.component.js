@@ -7,7 +7,7 @@ const DROPDOWN_TYPES_CLASSES = {
     large: styles.large
 }
 
-export const Dropdown = ({type, title, children}) => {
+export const Dropdown = ({ type, title, children }) => {
     const [isDropdownOpen, setIsdropdownOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -18,7 +18,7 @@ export const Dropdown = ({type, title, children}) => {
         <div className={styles.container}>
             <div onClick={toggleDropdown} className={`${styles.bar} ${DROPDOWN_TYPES_CLASSES[type]}`}>
                 <h2 className={styles.title}>{title}</h2>
-                <Arrow  className={isDropdownOpen ? `${styles.arrow} ${styles.open}` : `${styles.arrow}`}/>
+                <Arrow className={isDropdownOpen ? `${styles.arrow} ${styles.open}` : `${styles.arrow}`} />
             </div>
             <div className={isDropdownOpen ? `${styles.textBox} ${styles.boxOpen}` : `${styles.textBox}`}>{children}</div>
         </div>

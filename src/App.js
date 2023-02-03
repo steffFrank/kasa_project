@@ -37,7 +37,7 @@ const App = () => {
       element: <Navigation />,
       errorElement: (<><Header /><Error /><Footer /></>),
       children: routes,
-    }  
+    }
   ])
 
   return <RouterProvider router={router} />

@@ -11,7 +11,7 @@ import { paths } from "../../utils/route.utils";
 
 export const Appartment = () => {
     const { appartments, isLoading, error } = useContext(appartementContext);
-    
+
     const navigate = useNavigate();
     const { id } = useParams();
     const appartment = appartments.find(appartment => appartment._id === id);
@@ -21,11 +21,11 @@ export const Appartment = () => {
             navigate(paths.error);
         }
     });
-    
+
     return (
         isLoading ? <Loading /> : <section className={styles.appartment}>
-            <Carousel pictures={appartment.pictures}/>
-            <TitleContainer appartment={appartment}/>
+            <Carousel pictures={appartment.pictures} />
+            <TitleContainer appartment={appartment} />
             <DescriptionContainer description={appartment.description} equipements={appartment.equipments} />
         </section>
     )
