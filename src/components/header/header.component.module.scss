@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 30px 0;
+    min-width: 320px;
 }
 
 .nav {
@@ -27,8 +28,8 @@
 
 
 .logo {
-    width: clamp(145px, 15vw, 210.32px);
-    height: clamp(47px, 12vw, 68px);
+    width: clamp(125px, 38.67vw, 210.32px);
+    height: clamp(40.51px, 12.6vw, 68px);
 }
 
 .active {
