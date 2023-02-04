@@ -2,12 +2,12 @@
 @import "../../assets/css/variables";
 
 .article {
-    width: clamp(335px, 45vw, 340px);
+    width: clamp(280px, 89.5vw, 340px);
     height: clamp(255px, 15vw, 340px);
     border-radius: $b-radius-lg;
     mix-blend-mode: darken;
-    margin: auto;
     cursor: pointer;
+    margin: auto;
     transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
     &:hover {
         transform: scale(1.06);

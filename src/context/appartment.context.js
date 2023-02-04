@@ -11,7 +11,6 @@ export const AppartmentProvider = ({ children }) => {
     const { data, isLoading, error } = useGetDataFromApi(
         "http://localhost:3001/appartments"
     );
-    console.log(data);
     const value = { appartments: data, isLoading, error };
     return (
         <appartementContext.Provider value={value}>

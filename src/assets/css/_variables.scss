@@ -12,11 +12,12 @@ $b-radius-xlg: 25px;
 $vw: 2vw;
 
 $media: (
+    mobile-sm: "max-width: 374px",
     tablet: "min-width: 768px",
     laptop: "min-width: 992px",
     desktop: "min-width: 1440px"
 );
-
+$mobileSm : map-get($media, mobile-sm);
 $tablet : map-get($media, tablet);
 $laptop : map-get($media, laptop);
 $desktop: map-get($media, desktop);
