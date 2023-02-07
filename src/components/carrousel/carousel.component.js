@@ -16,10 +16,10 @@ export const Carousel = ({ pictures }) => {
 
     useEffect(() => {
         if (pictures.length > 1) {
-            const timeout = setTimeout(() => {
+            const intervalId = setInterval(() => {
                 handleClick("right");
             }, 5000);
-            return () => clearTimeout(timeout);
+            return () => clearInterval(intervalId);
         }
     });
 
