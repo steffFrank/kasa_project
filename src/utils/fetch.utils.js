@@ -5,6 +5,7 @@ export const useGetDataFromApi = (url) => {
     const [data, setData] = useState(appartments);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -15,7 +16,7 @@ export const useGetDataFromApi = (url) => {
                     const receivedData = await response.json();
                     setData(receivedData);
                     setIsLoading(false);
-                    localStorage.setItem("appartments", JSON.stringify(data));
+                    localStorage.setItem("appartments", JSON.stringify(receivedData));
                 }
                
             } catch (error) {
@@ -26,5 +27,8 @@ export const useGetDataFromApi = (url) => {
         fetchData();
     },[url, data]);
 
+    useEffect(() => {
+        localStorage.setItem("appartments", JSON.stringify(data));
+    }, [data]);
     return {data, isLoading, error}
 }
