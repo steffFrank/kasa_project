@@ -1,11 +1,11 @@
 export  const paths = 
     {
       home: "/",
-      about: "about",
+      about: "/about",
       id: "/:id",
-      error: "*",
+      error: "/error",
     }
 export  const links = [
     {path: paths.home, text: "accueil"},
-    {path: paths.about, text: "a propos"}
+    {path: paths.about, text: "a propos"},
 ]
