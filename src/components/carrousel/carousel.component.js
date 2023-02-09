@@ -32,15 +32,16 @@ export const Carousel = ({ pictures }) => {
             />
             {pictures.length !== 1 && (
                 <div className={styles.arrows}>
-                    <Arrow onClick={() => handleClick("left")} className={styles.left} />
+                    <Arrow data-testid = "left-arrow" onClick={() => handleClick("left")} className={styles.left} />
                     <Arrow
+                        data-testid = "right-arrow"
                         onClick={() => handleClick("right")}
                         className={styles.right}
                     />
                 </div>
             )}
-            {pictures.lengh !== 1 && (
-                <footer className={styles.footer}>
+            {pictures.length !== 1 && (
+                <footer data-testid = "footer" className={styles.footer}>
                     <span>
                         {index} / {maxIndex}
                     </span>
