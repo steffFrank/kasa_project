@@ -16,11 +16,11 @@ export const Dropdown = ({ type, title, children }) => {
 
     return (
         <div className={styles.container}>
-            <div onClick={toggleDropdown} className={`${styles.bar} ${DROPDOWN_TYPES_CLASSES[type]}`}>
-                <h2 className={styles.title}>{title}</h2>
-                <Arrow className={isDropdownOpen ? `${styles.arrow} ${styles.open}` : `${styles.arrow}`} />
+            <div data-testid="dropdown" onClick={toggleDropdown} className={`${styles.bar} ${DROPDOWN_TYPES_CLASSES[type]}`}>
+                <h2 data-testid="title" className={styles.title}>{title}</h2>
+                <Arrow data-testid="arrow" className={isDropdownOpen ? `${styles.arrow} ${styles.open}` : `${styles.arrow}`} />
             </div>
-            <div className={isDropdownOpen ? `${styles.textBox} ${styles.boxOpen}` : `${styles.textBox}`}>{children}</div>
+            <div data-testid="textBox" className={isDropdownOpen ? `${styles.textBox} ${styles.boxOpen}` : `${styles.textBox}`}>{children}</div>
         </div>
     )
 }
