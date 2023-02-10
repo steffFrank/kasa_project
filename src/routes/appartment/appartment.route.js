@@ -5,8 +5,8 @@ import { appartementContext } from "../../context/appartment.context";
 import { TitleContainer } from "../../components/titleContainer/titleContainer.component";
 import { DescriptionContainer } from "../../components/descriptionContainer/descriptionContainer.component";
 import { Loading } from "../../components/loading/loading.component";
-import { paths } from "../../utils/page.utils";
-import styles from "./appartment.page.module.scss";
+import { paths } from "../../utils/route.utils";
+import styles from "./appartment.route.module.scss";
 
 
 
