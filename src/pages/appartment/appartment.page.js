@@ -22,7 +22,7 @@ export const Appartment = () => {
             navigate(paths.error);
         }
     });
-
+    
     return (
         isLoading ? <Loading /> : <section className={styles.appartment}>
             <Carousel pictures={appartment.pictures} />

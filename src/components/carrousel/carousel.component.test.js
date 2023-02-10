@@ -3,7 +3,11 @@ import { Carousel } from "./carousel.component";
 import "../../setupTests";
 
 afterEach(cleanup);
-const pictures = ["http://localhost/pic1.jpg", "http://localhost/pic2.jpg", "http://localhost/pic3.jpg"];
+const pictures = [
+    "http://localhost/pic1.jpg",
+    "http://localhost/pic2.jpg",
+    "http://localhost/pic3.jpg"
+];
 
 describe("Carousel component", () => {
     it("should render images and buttons", () => {

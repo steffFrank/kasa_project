@@ -3,13 +3,11 @@
 
 .tag {
     min-width: clamp(84px, 13vw, 115px);
-    height: clamp(18px, 2vw, 25px);
     background-color: $color-primary;
     border-radius: clamp($b-radius-sm, 1vw, $b-radius-lg);
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    padding: 0 20px;
+    padding: 1px 20px;
 }
 
 .title {
